@@ -1,0 +1,194 @@
+/* CSS bổ sung cho các trang bài tập. Giữ nguyên style.css gốc. */
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer,
+figure {
+	display: block;
+}
+
+#main article.body {
+	padding: 0 30px;
+}
+
+#sidebar section.section {
+	background: url(../images/box-shadow-bottom.png) no-repeat left bottom;
+	margin: 0 0 24px;
+	padding: 0 0 6px;
+}
+
+/* Trang đăng ký */
+#main .assignment-body {
+	padding: 0 30px;
+}
+
+.register-page h1,
+.media-page h1 {
+	margin-bottom: 24px;
+}
+
+.form-intro {
+	padding-bottom: 24px !important;
+}
+
+.register-form {
+	color: #525252;
+	font-size: 14px;
+}
+
+.register-form fieldset {
+	border: 1px solid #9d9d9d;
+	margin: 0 0 12px;
+	padding: 10px 14px 12px;
+}
+
+.register-form legend {
+	color: #300302;
+	font-size: 15px;
+	font-weight: normal;
+	padding: 0 4px;
+}
+
+.register-form .form-row {
+	margin: 0 0 22px;
+}
+
+.register-form .form-row:last-child {
+	margin-bottom: 8px;
+}
+
+.register-form label,
+.register-form .group-label {
+	display: block;
+	line-height: 22px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="tel"],
+.register-form input[type="date"],
+.register-form input[type="number"],
+.register-form select,
+.register-form textarea {
+	box-sizing: border-box;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	max-width: 100%;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="tel"] {
+	width: 180px;
+}
+
+.register-form input[type="date"] {
+	width: 125px;
+}
+
+.register-form .short-field input {
+	width: 75px;
+}
+
+.register-form textarea {
+	resize: vertical;
+	width: 320px;
+}
+
+.register-form .inline-options {
+	margin-top: 8px;
+}
+
+.register-form .inline-options label {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.register-form .agreement-row label {
+	display: inline-block;
+}
+
+.register-form .form-actions {
+	padding-top: 2px;
+}
+
+.register-form .form-actions .btn {
+	border: 0;
+	margin-right: 4px;
+	vertical-align: top;
+}
+
+/* Trang media */
+.media-page .article-header h1 {
+	margin-bottom: 12px;
+}
+
+.media-page .meta {
+	font-size: 12px !important;
+	padding-bottom: 28px !important;
+}
+
+.media-page figure {
+	margin: 0 0 24px;
+}
+
+.media-page figure > img,
+.media-page video,
+.media-page .map-frame {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+}
+
+.media-page figure > img {
+	height: auto;
+}
+
+.media-page figcaption {
+	color: #525252;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.media-page section {
+	margin: 0 0 28px;
+}
+
+.media-page section h2 {
+	color: #300302;
+	font-size: 18px !important;
+	font-weight: bold;
+	line-height: 28px !important;
+	margin: 0 0 18px !important;
+	text-align: center !important;
+}
+
+.media-page video {
+	background: #000;
+	height: auto;
+}
+
+.media-page audio {
+	max-width: 100%;
+	width: 320px;
+}
+
+.media-page .map-frame {
+	border: 0;
+	height: 330px;
+}
+
+.media-page .eco-image {
+	image-rendering: auto;
+	width: 100%;
+}
+
+.media-page .article-footer p {
+	font-size: 12px !important;
+	padding-bottom: 0 !important;
+}
