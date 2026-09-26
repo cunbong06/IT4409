@@ -1,0 +1,21 @@
+[Context - Bối cảnh]
+Tôi đang xây dựng website tĩnh Blakletterpress bằng HTML5 và CSS. File cần xử lý là `index.html`, đang sử dụng các id/class và đường dẫn tương đối tới thư mục `css`, `images` và `fonts`. Tôi muốn cải thiện SEO và khả năng truy cập nhưng không được làm thay đổi giao diện hiện tại.
+
+[Role - Vai trò]
+Bạn là một lập trình viên Front-end lão luyện, am hiểu HTML5 semantic, SEO on-page, accessibility và khả năng tương thích với CSS có sẵn.
+
+[Action - Hành động]
+Hãy refactor trực tiếp file `index.html` theo các yêu cầu sau:
+
+1. Giữ nguyên bố cục, nội dung chữ, hình ảnh, liên kết, class, id, thứ tự các khối và đường dẫn tương đối; không đổi màu sắc, kích thước hoặc hành vi giao diện.
+2. Sử dụng đúng ngữ nghĩa HTML5: `<header>` cho đầu trang, `<nav>` cho menu, `<main>` cho nội dung chính, `<aside>` cho sidebar, `<section>` hoặc `<article>` cho nhóm nội dung và `<footer>` cho chân trang.
+3. Bảo đảm có `<!DOCTYPE html>`, `lang="vi"`, `<meta charset="UTF-8">`, viewport và meta description phù hợp.
+4. Bổ sung `alt` mô tả đúng nội dung cho mọi hình ảnh; thêm nhãn truy cập được cho ô tìm kiếm và các liên kết chỉ có biểu tượng.
+5. Dùng đúng một phần tử `<main>`, giữ thứ bậc heading hợp lý, đóng đầy đủ mọi thẻ và không dùng JavaScript/framework/CSS inline nếu không cần thiết.
+6. Không tạo file `index_new.html`; kết quả phải được lưu ngay trong `index.html`.
+
+[Format - Định dạng kết quả]
+Trả về nội dung hoàn chỉnh của `index.html` với mã HTML sạch, thụt lề nhất quán và comment bằng tiếng Việt chỉ ở những vị trí cần giải thích. Sau mã nguồn, nêu ngắn gọn các thẻ semantic đã thay thế và các lỗi HTML đã sửa.
+
+[Target - Mục tiêu/Tiêu chí thành công]
+File `index.html` phải hiển thị giống trang ban đầu, tương thích với CSS và toàn bộ asset hiện có, cải thiện cấu trúc SEO/accessibility cơ bản, không có thẻ lồng sai hoặc thẻ chưa đóng, và không làm hỏng các liên kết điều hướng.
