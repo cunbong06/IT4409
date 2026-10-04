@@ -1,18 +1,39 @@
-﻿Bạn là lập trình viên Front-end am hiểu CSS, box model, Flexbox và position.
+[Bối cảnh]
+Tôi có phiên bản website khuyến mãi thiệp Tết 2026:
+- css_homework/Bai tap 2 Tim va sua loi CSS/trang.html và style-loi.css.
+HTML đã có cấu trúc nội dung và semantic đúng. CSS có lỗi về box model, containing block, sticky và stacking order.
 
-Hãy đọc trang.html và style-loi.css trong thư mục css_homework/Bai tap 2 Tim va sua loi CSS, chẩn đoán và sửa trực tiếp CSS. Không thay đổi HTML, nội dung, class, id, liên kết hoặc đường dẫn ảnh; không thêm JavaScript hay framework.
+[Vai trò]
+Bạn là lập trình viên Front-end am hiểu CSS, Flexbox, box model, position và cách kiểm tra bố cục bằng trình duyệt/DevTools.
 
-Yêu cầu hiển thị:
-1. Menu sticky ở đầu màn hình khi cuộn và luôn nằm trên ảnh.
-2. Ảnh hero phủ kín khung, giữ tỉ lệ; khối tiêu đề căn giữa ảnh.
-3. Ba thẻ sản phẩm nằm cùng một hàng, ảnh và chữ gọn trong thẻ.
-4. Mỗi thẻ có nhãn “-20%” ở góc trên phải chính thẻ đó, không bị ảnh che.
-5. Nút “↑” fixed ở góc dưới phải, cách hai cạnh 24px.
+[Nhiệm vụ]
+Đọc HTML và CSS của cả hai phiên bản, chẩn đoán lỗi rồi sửa trực tiếp file style-loi.css tương ứng. Không chỉnh sửa HTML, nội dung, class, id, liên kết, đường dẫn ảnh; không thêm JavaScript hoặc framework vào trang.
 
-Kiểm tra kỹ overflow của các tổ tiên khiến sticky không hoạt động, box-sizing bị ghi đè khiến padding/border làm thẻ rớt hàng, và thứ tự z-index giữa ảnh với badge. Chỉ sửa lỗi thật, ưu tiên thay đổi ít thuộc tính.
+[Yêu cầu hiển thị]
+1. Thanh menu sticky ở đầu viewport khi cuộn trang và luôn nằm trên ảnh/tiêu đề hero.
+2. Ảnh hero phủ kín khung, giữ tỉ lệ; cả khối tiêu đề, mô tả và nút căn giữa hero theo hai trục.
+3. Ba thẻ sản phẩm nằm cùng một hàng với hai khoảng gap 24px. Padding và border không được làm tổng chiều rộng vượt danh sách.
+4. Mỗi thẻ có một nhãn “-20%” ở góc trên bên phải chính thẻ đó; nhãn phải nằm trên ảnh và nhìn thấy đầy đủ.
+5. Ảnh và toàn bộ mô tả/giá nằm gọn trong thẻ; chiều cao thẻ tăng theo nội dung, không cắt hay giấu chữ để che lỗi.
+6. Nút “↑” fixed cách cạnh dưới và cạnh phải viewport 24px, giữ nguyên vị trí khi cuộn và nằm trên nội dung.
+7. Khi thu hẹp cửa sổ, menu không tràn ngang; thẻ vẫn giữ một hàng theo yêu cầu, ảnh và chữ xuống dòng trong giới hạn của từng thẻ.
 
-Giữ các đoạn đúng: transform: scale(1.08) của ảnh hero, overflow: hidden của hero, translate(-50%, -50%) của overlay, margin âm và position/z-index của khu sản phẩm, position: relative và min-height của thẻ, position/z-index của ảnh. Giải thích ngắn gọn vì sao cần giữ chúng.
+[Cách phân tích]
+- Với mỗi lỗi, chỉ ra selector, khai báo liên quan, triệu chứng và nguyên nhân trước khi sửa.
+- Tính tổng chiều rộng thực của ba thẻ, gồm flex-basis, padding, border và hai gap; kiểm tra box-sizing có bị selector riêng ghi đè không.
+- Xác định containing block của hero-overlay và badge.
+- Kiểm tra các tổ tiên của header, giá trị overflow tính toán ở cả hai trục và phần tử thực sự cuộn; không chỉ tăng z-index khi sticky không hoạt động.
+- Phân tích thứ tự lớp của ảnh, badge, header và nút fixed.
+- Ưu tiên chỉnh ít thuộc tính, giữ màu sắc, font, nội dung và thiết kế hiện có.
 
-Kiểm tra khi cuộn và ở độ rộng 1280, 900, 768, 375px; bảo đảm không tràn ngang và ba nhãn đều nhìn thấy. Chỉ báo kiểm tra đạt nếu đã thực sự chạy.
+[Bảo vệ CSS đúng]
+Ở Bài 2, không tự động xóa transform: scale(1.08) của ảnh hero, overflow: hidden của hero, margin-top âm của khu sản phẩm, position/z-index của khu sản phẩm, translate(-50%, -50%) của overlay, position: relative và min-height của thẻ hoặc position/z-index của ảnh. Giải thích vì sao các đoạn này đang đúng. Nếu ảnh che badge, điều chỉnh thứ tự lớp của badge. Phân biệt overflow trên hero với overflow trên tổ tiên của sticky.
 
-Trả về: lỗi CSS, triệu chứng, nguyên nhân, cách sửa và kết quả kiểm tra. Không tự commit hoặc push.
+[Kiểm chứng]
+Kiểm tra cả hai trang ở các độ rộng 1280px, 900px, 768px và 375px. Quan sát trước/sau khi cuộn: header có bám top: 0, nút “↑” có giữ khoảng cách dưới/phải, ba thẻ có cùng tọa độ top, từng badge có nhìn thấy trên ảnh, ảnh và chữ có nằm trong thẻ, có thanh cuộn ngang hay ảnh lỗi không. Xác nhận hai file HTML không thay đổi. Chỉ báo kiểm tra đã đạt khi thực sự chạy được; nêu rõ giới hạn nếu môi trường không cho kiểm tra bằng trình duyệt.
+
+[Đầu ra]
+1. Bảng lỗi CSS: selector/khai báo ban đầu, triệu chứng, nguyên nhân, cách sửa.
+2. Hai file CSS đã sửa và tóm tắt thay đổi; danh sách CSS đúng được giữ lại.
+3. Kết quả kiểm tra thực tế và giới hạn còn lại.
+4. Không tự commit hoặc push Git; để tôi thực hiện sau khi xem bản sửa.
