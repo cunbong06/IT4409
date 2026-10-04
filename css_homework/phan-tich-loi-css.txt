@@ -1,0 +1,12 @@
+PHÂN TÍCH VÀ SỬA LỖI CSS TRANG KHUYẾN MÃI TẾT
+
+BÀI 1
+1. Menu không bám khi cuộn và có thể bị che: .site-header thiếu top và z-index. Sửa: thêm top: 0; z-index: 100.
+2. Tiêu đề lệch khỏi hero: .hero thiếu mốc định vị cho overlay absolute. Sửa: thêm position: relative.
+3. Ảnh hero bị méo: thiếu chế độ giữ tỉ lệ. Sửa: thêm object-fit: cover và display: block.
+4. Thẻ thứ ba rớt hàng: content-box cộng padding/border ngoài flex-basis. Sửa: thêm box-sizing: border-box vào reset.
+5. Nhãn “-20%” dồn ở góc trang: .card chưa làm mốc cho badge absolute. Sửa: thêm position: relative cho .card.
+6. Ảnh tràn thẻ: chưa giới hạn kích thước. Sửa: width: 100%; height: 180px; object-fit: cover.
+7. Chữ tràn thẻ: height: 300px không đủ chứa nội dung. Sửa: thay bằng min-height: 300px.
+8. Nút “↑” nằm góc trên phải: dùng sai cạnh neo. Sửa: thay top bằng bottom: 24px, giữ right: 24px và thêm z-index: 200.
+9. Thêm min-width: 0 và overflow-wrap: anywhere cho thẻ; cho header flex-wrap để tránh tràn ở cửa sổ hẹp.

@@ -1,0 +1,18 @@
+﻿Bạn là lập trình viên Front-end am hiểu CSS, box model, Flexbox và position.
+
+Hãy đọc trang.html và style-loi.css trong thư mục css_homework/Bai tap 2 Tim va sua loi CSS, chẩn đoán và sửa trực tiếp CSS. Không thay đổi HTML, nội dung, class, id, liên kết hoặc đường dẫn ảnh; không thêm JavaScript hay framework.
+
+Yêu cầu hiển thị:
+1. Menu sticky ở đầu màn hình khi cuộn và luôn nằm trên ảnh.
+2. Ảnh hero phủ kín khung, giữ tỉ lệ; khối tiêu đề căn giữa ảnh.
+3. Ba thẻ sản phẩm nằm cùng một hàng, ảnh và chữ gọn trong thẻ.
+4. Mỗi thẻ có nhãn “-20%” ở góc trên phải chính thẻ đó, không bị ảnh che.
+5. Nút “↑” fixed ở góc dưới phải, cách hai cạnh 24px.
+
+Kiểm tra kỹ overflow của các tổ tiên khiến sticky không hoạt động, box-sizing bị ghi đè khiến padding/border làm thẻ rớt hàng, và thứ tự z-index giữa ảnh với badge. Chỉ sửa lỗi thật, ưu tiên thay đổi ít thuộc tính.
+
+Giữ các đoạn đúng: transform: scale(1.08) của ảnh hero, overflow: hidden của hero, translate(-50%, -50%) của overlay, margin âm và position/z-index của khu sản phẩm, position: relative và min-height của thẻ, position/z-index của ảnh. Giải thích ngắn gọn vì sao cần giữ chúng.
+
+Kiểm tra khi cuộn và ở độ rộng 1280, 900, 768, 375px; bảo đảm không tràn ngang và ba nhãn đều nhìn thấy. Chỉ báo kiểm tra đạt nếu đã thực sự chạy.
+
+Trả về: lỗi CSS, triệu chứng, nguyên nhân, cách sửa và kết quả kiểm tra. Không tự commit hoặc push.
