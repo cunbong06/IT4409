@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Demo</title>
+    <style>
+        /* 1. Base Styles (Thiết lập chung cho mọi màn hình) */
+        * {
+            box-sizing: border-box; /* Tính padding và border trong kích thước phần tử */
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto; /* Căn giữa */
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép các cột xuống dòng khi không đủ chỗ */
+            gap: 20px; /* Khoảng cách giữa các cột và các hàng */
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 0 0 100%; /* Mobile: mỗi cột chiếm trọn một hàng */
+            min-width: 0;
+            overflow-wrap: anywhere;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        /* 2. Media Queries (Thiết kế cho các kích thước màn hình cụ thể) */
+        @media (min-width: 600px) {
+            .column {
+                flex-basis: calc((100% - 20px) / 2); /* Tablet: 2 cột, trừ 1 khoảng cách */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .column {
+                flex-basis: calc((100% - 40px) / 3); /* PC: 3 cột, trừ 2 khoảng cách */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="column">
+                <h3>Cột 1: PC (3 cột)</h3>
+                <p>Trên màn hình máy tính để bàn lớn (≥ 1024px), các khối này sẽ hiển thị <strong>ba cột</strong> nằm ngang.</p>
+            </div>
+            <div class="column">
+                <h3>Cột 2: Tablet (2 cột)</h3>
+                <p>Trên màn hình máy tính bảng (600px - 1023px), các khối này sẽ hiển thị <strong>hai cột</strong> nằm ngang.</p>
+            </div>
+            <div class="column">
+                <h3>Cột 3: Mobile (1 cột)</h3>
+                <p>Trên màn hình điện thoại di động (&lt; 600px), các khối này sẽ hiển thị <strong>một cột</strong> xếp chồng theo chiều dọc.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
